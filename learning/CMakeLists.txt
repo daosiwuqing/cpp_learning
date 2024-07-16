@@ -1,0 +1,10 @@
+﻿project(learning)
+
+add_subdirectory(cpp_cmake_lib_learning)
+add_subdirectory(cpp_data_type_learning)
+add_subdirectory(cpp_io_learning)
+add_subdirectory(cpp_iterator_learning)
+add_subdirectory(cpp_mysql_learning)
+# add_subdirectory(vscode_msvc_json_learning)
+
+
