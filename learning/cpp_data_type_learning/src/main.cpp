@@ -185,61 +185,77 @@ int main()
 
 
     ////6.2、情形2
-    //char array_char1[] = {'a', 'b', 'c', 'd'};
-    //char* p_char1 = array_char1;
-    //cout << "p_char1's type: " << typeid(p_char1).name() << endl;
-    //cout << "*p_char1's type: " << typeid(*p_char1).name() << endl;
-    //cout << p_char1 << endl;
-    //cout << p_char1[0] << endl;
-    //cout << p_char1[1] << endl;
-    //cout << *p_char1 << endl;
-    //cout << &p_char1 << endl;
-    //cout << array_char1 << endl;
-    //cout << &array_char1 << endl;
+    // char array_char1[] = {'a', 'b', 'c', 'd'};
+    // char* p_char1 = array_char1;
+    // cout << "p_char1's type: " << typeid(p_char1).name() << endl;
+    // cout << "*p_char1's type: " << typeid(*p_char1).name() << endl;
+    // cout << p_char1 << endl;
+    // cout << p_char1[0] << endl;
+    // cout << p_char1[1] << endl;
+    // cout << *p_char1 << endl;
+    // cout << &p_char1 << endl;
+    // cout << array_char1 << endl;
+    // cout << &array_char1 << endl;
 
 
     ////6.3、情形3
-    //char array_char2[] = "abcd"; // 也可以是char array_char2[] = {'a', 'b', 'c', 'd', '\0'}或char array_char2[] = { "abcd" };
-    //char* p_char2 = array_char2;
-    //cout << "p_char2's type: " << typeid(p_char2).name() << endl;
-    //cout << "*p_char2's type: " << typeid(*p_char2).name() << endl;
-    //cout << p_char2 << endl;
-    //cout << p_char2[0] << endl;
-    //cout << p_char2[1] << endl;
-    //cout << *p_char2 << endl;
-    //cout << &p_char2 << endl;
-    //cout << array_char2 << endl;
-    //cout << &array_char2 << endl;
+    // char array_char2[] = "abcd"; // 也可以是char array_char2[] = {'a', 'b', 'c', 'd', '\0'}或char array_char2[] = { "abcd" };
+    // char* p_char2 = array_char2;
+    // cout << "p_char2's type: " << typeid(p_char2).name() << endl;
+    // cout << "*p_char2's type: " << typeid(*p_char2).name() << endl;
+    // cout << p_char2 << endl;
+    // cout << p_char2[0] << endl;
+    // cout << p_char2[1] << endl;
+    // cout << *p_char2 << endl;
+    // cout << &p_char2 << endl;
+    // cout << array_char2 << endl;
+    // cout << &array_char2 << endl;
 
 
     ////6.4、情形4
-    //const char array_char3[] = "abcd";
-    //const char* p_char3 = array_char3; // const在*号之前，此时指针可以指向一个const变量也可以指向一个非const变量，但const变量只能被指向const变量的指针指向
-    //cout << "p_char3's type: " << typeid(p_char3).name() << endl;
-    //cout << "*p_char3's type: " << typeid(*p_char3).name() << endl;
-    //cout << p_char3 << endl;
-    //cout << p_char3[0] << endl;
-    //cout << p_char3[1] << endl;
-    //cout << *p_char3 << endl;
-    //cout << &p_char3 << endl;
-    //cout << array_char3 << endl;
-    //cout << &array_char3 << endl;
+    // char* p_char3[] = { "abc", "bcd", "cde" }; // 也可以是char* p_char3[] = { {'a', 'b', 'c','\0'}, {'b','c','d','\0'} , {'c','d','e','\0'} }或char* p_char3[] = { {"abc"}, {"def"} , {"cde"} };
+    // cout << "p_char3's type: " << typeid(p_char3).name() << endl;
+    // cout << "*p_char3's type: " << typeid(*p_char3).name() << endl;
+    // cout << p_char3 << endl;
+    // cout << p_char3[0] << endl;
+    // cout << p_char3[1] << endl;
+    // cout << *p_char3 << endl;
+    // cout << &p_char3 << endl;
+    ////情形4的本质原理
+    // char* pt1 = "abc";
+    // char* pt2 = "bcd";
+    // char* pt3 = "cde";
+    // char* p_char3[] = { pt1, pt2, pt3 };
 
 
     ////6.5、情形5
-    //const char* p_char4[] = { "abc", "bcd", "cde" }; // 也可以是const char* p_char4[] = { {'a', 'b', 'c','\0'}, {'b','c','d','\0'} , {'c','d','e','\0'} }或const char* p_char4[] = { {"abc"}, {"def"} , {"cde"} };
-    //cout << "p_char4's type: " << typeid(p_char4).name() << endl;
-    //cout << "*p_char4's type: " << typeid(*p_char4).name() << endl;
-    //cout << p_char4 << endl;
-    //cout << p_char4[0] << endl;
-    //cout << p_char4[1] << endl;
-    //cout << *p_char4 << endl;
-    //cout << &p_char4 << endl;
-    ////情形5的本质原理
+    // const char array_char4[] = "abcd";
+    // const char* p_char4 = array_char4; // const在*号之前，此时指针可以指向一个const变量也可以指向一个非const变量，但const变量只能被指向const变量的指针指向
+    // cout << "p_char4's type: " << typeid(p_char4).name() << endl;
+    // cout << "*p_char4's type: " << typeid(*p_char4).name() << endl;
+    // cout << p_char4 << endl;
+    // cout << p_char4[0] << endl;
+    // cout << p_char4[1] << endl;
+    // cout << *p_char4 << endl;
+    // cout << &p_char4 << endl;
+    // cout << array_char4 << endl;
+    // cout << &array_char4 << endl;
+
+
+    ////6.6、情形6
+    //const char* p_char5[] = { "abc", "bcd", "cde" }; // 也可以是const char* p_char5[] = { {'a', 'b', 'c','\0'}, {'b','c','d','\0'} , {'c','d','e','\0'} }或const char* p_char5[] = { {"abc"}, {"def"} , {"cde"} };
+    //cout << "p_char5's type: " << typeid(p_char5).name() << endl;
+    //cout << "*p_char5's type: " << typeid(*p_char5).name() << endl;
+    //cout << p_char5 << endl;
+    //cout << p_char5[0] << endl;
+    //cout << p_char5[1] << endl;
+    //cout << *p_char5 << endl;
+    //cout << &p_char5 << endl;
+    ////情形6的本质原理
     //const char* pt1 = "abc";
     //const char* pt2 = "bcd";
     //const char* pt3 = "cde";
-    //const char* p_char4[] = { pt1, pt2, pt3 };
+    //const char* p_char5[] = { pt1, pt2, pt3 };
 
 
 
