@@ -1,6 +1,6 @@
 ﻿cmake_minimum_required(VERSION 3.15)
 
-project(option_pricing)
+project(Option_pricing)
 
 file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp) # 把源文件名都赋值给变量SRC_LIST
 
